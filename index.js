@@ -36,7 +36,7 @@ app.get("/searchmobile", (req, res) => {
 })
 
 app.get("/london", (req, res) => {
-    const weatherApiKey = "8850957d3e4c816d0a47f99067dade25";
+    const weatherApiKey = APIKEY;
     const lat = 51.51;
     const lon = -0.13;
     const cityUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${weatherApiKey}`;
@@ -125,7 +125,7 @@ app.get("/london", (req, res) => {
 })
 
 app.get("/manchester", (req, res) => {
-    const weatherApiKey = "8850957d3e4c816d0a47f99067dade25";
+    const weatherApiKey = APIKEY;
     const lat = 53.48;
     const lon = -2.24;
     const cityUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${weatherApiKey}`;
@@ -217,7 +217,7 @@ app.get("/showCity", (req, res) => {
     const city = req.query.theCity;
     const cityCapitalised = city.charAt(0).toUpperCase() + city.slice(1);
     const country = req.query.theCountry;
-    const weatherApiKey = "8850957d3e4c816d0a47f99067dade25";
+    const weatherApiKey = APIKEY;
     const cityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityCapitalised},${country}&units=metric&appid=${weatherApiKey}`;
 
     request( { url: cityUrl, json: true }, (error, response) => {
