@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="manchester.css" />
+    <title>City Forecast - Manchester, UK</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="inner-container">
+            <h1 class="mcr-title">Manchester Forecast</h1>
+            <div class="display-box">
+                {{#if message}}
+                    <h2>Sorry, this information is not currently available.</h2>
+                {{else}}
+                    <h2>The current temperature in Manchester is {{ currentTemp }}°C</h2>
+                    <img class="weather-icon" src="http://openweathermap.org/img/wn/{{currentIcon}}@2x.png" alt="weather icon" />
+                    <h2>{{ currentDesc }}</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="daily-weather-box">
+                            <h2 class="day-name">Tomorrow</h2>
+                            <h3>{{ day2date }}</h3>
+                            <img class="weather-icon" src="http://openweathermap.org/img/wn/{{day2icon}}@2x.png" alt="weather icon" />
+                            <h3>{{day2temp}}°C</h3>
+                            <h3>{{day2desc}}</h3>
+                        </div>
+                        <div class="daily-weather-box">
+                            <h2 class="day-name">{{ day3 }}</h2>
+                            <h3>{{ day3date }}</h3>
+                            <img class="weather-icon" src="http://openweathermap.org/img/wn/{{day3icon}}@2x.png" alt="weather icon" />
+                            <h3>{{day3temp}}°C</h3>
+                            <h3>{{day3desc}}</h3>
+                        </div>
+                        <div class="daily-weather-box">
+                            <h2 class="day-name">{{ day4 }}</h2>
+                            <h3>{{ day4date }}</h3>
+                            <img class="weather-icon" src="http://openweathermap.org/img/wn/{{day4icon}}@2x.png" alt="weather icon" />
+                            <h3>{{day4temp}}°C</h3>
+                            <h3>{{day4desc}}</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="daily-weather-box">
+                            <h2 class="day-name">{{ day5 }}</h2>
+                            <h3>{{ day5date }}</h3>
+                            <img class="weather-icon" src="http://openweathermap.org/img/wn/{{day5icon}}@2x.png" alt="weather icon" />
+                            <h3>{{day5temp}}°C</h3>
+                            <h3>{{day5desc}}</h3>
+                        </div>
+                        <div class="daily-weather-box">
+                            <h2 class="day-name">{{ day6}}</h2>
+                            <h3>{{ day6date }}</h3>
+                            <img class="weather-icon" src="http://openweathermap.org/img/wn/{{day6icon}}@2x.png" alt="weather icon" />
+                            <h3>{{day6temp}}°C</h3>
+                            <h3>{{day6desc}}</h3>
+                        </div>
+                        <div class="daily-weather-box">
+                            <h2 class="day-name">{{ day7 }}</h2>
+                            <h3>{{ day7date }}</h3>
+                            <img class="weather-icon" src="http://openweathermap.org/img/wn/{{day7icon}}@2x.png" alt="weather icon" />
+                            <h3>{{day7temp}}°C</h3>
+                            <h3>{{day7desc}}</h3>
+                            
+                        </div>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+        <img class="cityscape" src="images/manchester_skyline.png" alt="cityscape">   
+    </div>
+
+</body>
+</html>

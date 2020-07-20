@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>City Forecast</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="inner-container">
+            <a href="/search"><h1 id="site-title">City Forecast</h1></a>
+            <div class="search-box">
+            <h2>Check the weather in any city!</h2>
+                <form class="form" action="/showCity" method="GET">
+                    <label for="city">Search for the curent weather in...</label>
+                    <br>
+                    <input type="text" id="city" name="theCity" placeholder="City name"/>
+                    <br>
+                    <label for="country">in</label>
+                    <br>
+                    <input type="text" id="country" name="theCountry" placeholder="Country code" title="Scroll down for a list of country codes"/>
+                    <br>
+                    <a href="#country-codes" id="scroll-down">Scroll down for a list of country codes</a>
+                    <br>
+                    <button type="submit" title="Scroll down for a list of country codes">Search</button>
+                </form> 
+            </div>
+        </div>
+        <div class="country-code-container">
+            <h2 class="codes-title" id="country-codes">Country Codes</h2>
+            <div class="country-code-flexbox">
+                {{!-- Header row --}}
+                <div class="row" id="au">
+                    <div class="column _50">
+                        <p>Australia</p>
+                    </div>
+                    <div class="column _25">
+                       <p>AU</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇦🇺</p>
+                    </div>
+                </div>
+                <div class="row" id="ca">
+                    <div class="column _50">
+                        <p>Canada</p>
+                    </div>
+                    <div class="column _25">
+                       <p>CA</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇨🇦</p>
+                    </div>
+                </div>
+                <div class="row" id="ie">
+                    <div class="column _50">
+                        <p>Ireland</p>
+                    </div>
+                    <div class="column _25">
+                       <p>IE</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇨🇮</p>
+                    </div>
+                </div>
+                <div class="row" id="nz">
+                    <div class="column _50">
+                        <p>New Zealand</p>
+                    </div>
+                    <div class="column _25">
+                       <p>NZ</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇳🇿</p>
+                    </div>
+                </div>
+                <div class="row" id="za">
+                    <div class="column _50">
+                        <p>South Africa</p>
+                    </div>
+                    <div class="column _25">
+                       <p>ZA</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇿🇦</p>
+                    </div>
+                </div>
+                <div class="row" id="gb">
+                    <div class="column _50">
+                        <p>United Kingdom</p>
+                    </div>
+                    <div class="column _25">
+                       <p>GB</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇬🇧</p>
+                    </div>
+                </div>
+                <div class="row" id="us">
+                    <div class="column _50">
+                        <p>United States</p>
+                    </div>
+                    <div class="column _25">
+                       <p>US</p>
+                    </div>
+                    <div class="column _25">
+                        <p>🇺🇸</p>
+                    </div>
+                </div>
+                <p class="codes-link-text">Can't find your country? Find a full list <a class="codes-link" href="https://www.iban.com/country-codes">here</a>.</p>
+            </div>
+        </div>
+        <img class="cityscape" src="images/skyline.png" alt="cityscape">   
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
